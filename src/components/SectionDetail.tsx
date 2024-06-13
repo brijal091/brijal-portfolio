@@ -28,7 +28,7 @@ const SectionDetail = (props: any) => {
 
 const SectionWrapper = ({ children, id, setActiveSection }: any) => {
   const [ref, isIntersecting] = useOnScreen({
-    threshold: 0.5,
+    threshold: 0.7,
   });
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const SectionWrapper = ({ children, id, setActiveSection }: any) => {
   }, [isIntersecting, id, setActiveSection]);
 
   return (
-    <section ref={ref} id={id.substring(1)} style={{ minHeight: '80vh' }}>
+    <section ref={ref} id={id.substring(1)} className='mb-12'>
       {children}
     </section>
   );

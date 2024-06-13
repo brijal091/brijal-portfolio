@@ -1,12 +1,15 @@
 import React from "react";
-import { ABOUT, MENU } from "@/Constant";
+import { ABOUT, MENU, PROFILE_LINKS } from "@/Constant";
 import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Header = (props: any) => {
   return (
     <div className="flex flex-col gap-4 p-28">
       <Link href="/">
-        <h1 className="text-7xl font-black">{ABOUT.NAME}</h1>
+        <h1 className="text-6xl font-black text-white">{ABOUT.NAME}</h1>
       </Link>
       <p className="text-white text-2xl">{ABOUT.POSITION}</p>
       <p className="text-xl">{ABOUT.WORK}</p>
@@ -31,6 +34,20 @@ const Header = (props: any) => {
             </Link>
           );
         })}
+      </div>
+      <div className="flex justify-between mt-auto w-1/2">
+        <Link href={PROFILE_LINKS.GITHUB}>
+          <FaGithub size={30}/>
+        </Link>
+        <Link href={PROFILE_LINKS.LINKEDIN}>
+          <FaLinkedin size={30}/>
+        </Link>
+        <Link href={"/"}>
+          <FaSquareXTwitter size={30}/>
+        </Link>
+        <Link href={"/"}>
+          <FiInstagram size={30}/>
+        </Link>
       </div>
     </div>
   );

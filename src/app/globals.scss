@@ -23,6 +23,12 @@ body{
   color: $text
 }
 
+p{
+  line-height: 30px;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+
 /* Custom scrollbar styles */
 .no-scroll::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
@@ -31,4 +37,15 @@ body{
 .no-scroll {
   -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
   scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.light-cursor {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: overlay;
 }

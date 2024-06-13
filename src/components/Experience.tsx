@@ -3,11 +3,14 @@ import React from 'react'
 
 const Experience = () => {
   return (
-    <section id='#experience' style={{minHeight: '80vh'}}>
-        <h2>Experience</h2>
+    <div className="flex flex-col gap-6">
+        <h2 className="text-white text-3xl">Experience</h2>
       <p>{ABOUT_SECTION_DETAIL.PARA_1}</p>
       <p>{ABOUT_SECTION_DETAIL.PARA_2}</p>
-    </section>
+      <p>{ABOUT_SECTION_DETAIL.PARA_2}</p>
+      <p>{ABOUT_SECTION_DETAIL.PARA_2}</p>
+      
+    </div>
   )
 }
 

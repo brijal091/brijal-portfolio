@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import SectionDetail from "@/components/SectionDetail";
 import { useEffect, useRef, useState } from "react";
 export default function Home() {
+  
   const [activeSection, setActiveSection] = useState('#about');
   return (
     <main className="min-h-screen container mx-auto">
